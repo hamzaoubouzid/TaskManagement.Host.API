@@ -13,6 +13,7 @@
     </PackageReference>
     <PackageReference Include="Newtonsoft.Json.Bson" Version="1.0.3-beta1" />
     <PackageReference Include="Swashbuckle.AspNetCore" Version="6.2.3" />
+    <PackageReference Include="System.Configuration.ConfigurationManager" Version="7.0.0" />
   </ItemGroup>
 
   <ItemGroup>
@@ -20,6 +21,7 @@
     <ProjectReference Include="..\TaskManagement.Notifier\TaskManagement.Notifier.csproj" />
     <ProjectReference Include="..\TaskManagement.Scheduler\TaskManagement.Scheduler.csproj" />
     <ProjectReference Include="..\TaskManagement.Services.EF\TaskManagement.Services.EF.csproj" />
+    <ProjectReference Include="..\TaskManagement.Services.Mongo\TaskManagement.Services.Mongo.csproj" />
   </ItemGroup>
 
 </Project>

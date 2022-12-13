@@ -22,6 +22,8 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "BackUpDataBase", "BackUpDat
 		..\..\..\..\..\Program Files\Microsoft SQL Server\MSSQL13.HAMZA\MSSQL\Backup\TaskManagmentMyDatabase.bak = ..\..\..\..\..\Program Files\Microsoft SQL Server\MSSQL13.HAMZA\MSSQL\Backup\TaskManagmentMyDatabase.bak
 	EndProjectSection
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TaskManagement.Services.Mongo", "TaskManagement.Services.Mongo\TaskManagement.Services.Mongo.csproj", "{07362E5D-8A54-49E7-96A3-8507EE24EF7F}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -56,6 +58,10 @@ Global
 		{CCD43312-DD4D-4F89-99D6-2DBDBB1C5C6D}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{CCD43312-DD4D-4F89-99D6-2DBDBB1C5C6D}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{CCD43312-DD4D-4F89-99D6-2DBDBB1C5C6D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{07362E5D-8A54-49E7-96A3-8507EE24EF7F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{07362E5D-8A54-49E7-96A3-8507EE24EF7F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{07362E5D-8A54-49E7-96A3-8507EE24EF7F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{07362E5D-8A54-49E7-96A3-8507EE24EF7F}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

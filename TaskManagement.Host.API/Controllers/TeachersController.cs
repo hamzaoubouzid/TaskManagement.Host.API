@@ -1,5 +1,6 @@
 ﻿using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.Extensions.Caching.Memory;
 using TaskManagement.DTO;
 using TaskManagement.Services.Contract;
 
@@ -9,13 +10,17 @@ namespace TaskManagement.Host.API.Controllers
     [ApiController]
     public class TeachersController : ControllerBase
     {
+        private readonly IMemoryCache _memoryCacheTeachers;
         private readonly ILogger<TeachersController> _logger;
         private readonly ITeachersRepository _ITeachersRepository;
 
-        public TeachersController(ILogger<TeachersController> logger, ITeachersRepository ITeachersRepository)
+        public TeachersController(ILogger<TeachersController> logger, 
+                                    ITeachersRepository ITeachersRepository,
+                                    IMemoryCache memoryCacheTeachers)
         {
             _logger = logger;
             _ITeachersRepository = ITeachersRepository;
+            _memoryCacheTeachers = memoryCacheTeachers;
         }
 
         [Route("GetAllTeachers")]

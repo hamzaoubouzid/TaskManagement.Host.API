@@ -1,5 +1,6 @@
 ﻿using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.Extensions.Caching.Memory;
 using TaskManagement.Business;
 using TaskManagement.DTO;
 using TaskManagement.Notifier;
@@ -11,18 +12,21 @@ namespace TaskManagement.Host.API.Controllers
     [ApiController]
     public class TaskController : ControllerBase
     {
-
+        private readonly IMemoryCache _memoryCacheTask;
         private readonly ILogger<TaskController> _logger;
         private readonly ITaskRepository _ITaskRepository;
         private readonly ITaskManagmentNotifier _ITaskManagmentNotifier;
+        private readonly string TaskCollectionKey = "taskCollectionKey";
 
         public TaskController(ILogger<TaskController> logger, 
                               ITaskRepository ITaskRepository ,
-                              ITaskManagmentNotifier ITaskManagmentNotifier)
+                              ITaskManagmentNotifier ITaskManagmentNotifier,
+                              IMemoryCache memoryCacheTask)
         {
             _logger = logger;
             _ITaskRepository = ITaskRepository;
             _ITaskManagmentNotifier = ITaskManagmentNotifier;
+            _memoryCacheTask = memoryCacheTask;
         }
 
 
